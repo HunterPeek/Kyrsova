@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нотатник</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мій нотатник</h1>
+
+        <div id="auth-container">
+            <input type="text" id="username" placeholder="Ім'я користувача">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="login-btn">Увійти</button>
+            <button id="register-btn">Зареєструватися</button>
+        </div>
+
+        <div id="note-app" style="display: none;">
+            <div class="top-bar">
+                <span id="user-info"></span>
+                <button id="logout-btn">Вийти</button>
+            </div>
+
+            <div class="note-form">
+                <input type="text" id="note-title" placeholder="Заголовок...">
+                <textarea id="note-content" placeholder="Текст нотатки..."></textarea>
+                <select id="note-category"></select>
+                <button id="add-note-btn">Додати нотатку</button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="active">Активні</button>
+                <button class="tab-btn" data-tab="archived">Архів</button>
+            </div>
+
+            <div id="notes-container" class="notes-container"></div>
+            <div id="archived-notes-container" class="notes-container" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="document.js"></script>
+</body>
+</html>
